@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { red } from '@material-ui/core/colors';
 import GlobalData from './GlobalData'
 
 const useStyles = makeStyles((theme) => ({
@@ -15,14 +14,6 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
 }));
-
-// export default function GlobalCount() {
-//     return (
-//         <div>
-            
-//         </div>
-//     )
-// }
 
 
 export default function MainGrid() {
@@ -45,7 +36,9 @@ export default function MainGrid() {
             <Grid container spacing={3}>
 
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}><GlobalData/></Paper>
+                    <Paper className={classes.paper}>
+                        <GlobalData/>
+                    </Paper>
                 </Grid>
 
 
