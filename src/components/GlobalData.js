@@ -34,6 +34,8 @@ export const GlobalData = () => {
       headers: {
         "x-rapidapi-host": process.env.REACT_APP_RAPID_HOST,
         "x-rapidapi-key": process.env.REACT_APP_RAPID_API,
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods':'*',
       },
     };
 
@@ -53,7 +55,6 @@ export const GlobalData = () => {
   }, []);
 
   const Loading = "Loading...";
-  console.log("gd", err);
     if (loading) {
       return Loading;
     } else
